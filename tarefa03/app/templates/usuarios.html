@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.matricula }}</td>
+            <td>{{ usuario.idade }}</td>
+            <td>{{ usuario.cidade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
